@@ -1,0 +1,41 @@
+import random
+actions = ["stone", "paper", "scissors"]
+round_play = int(input("How many rounds do you want to play? "))
+user_mrk = 0
+comp_mrk = 0
+def game(round_play):
+    global comp_mrk, user_mrk
+    for i in range(round_play):
+        print("Round", i+ 1)
+        user_choice = input("Choose stone, paper, or scissors: ")
+        computer_choice = random.choice(actions)
+        print("Computer chose", computer_choice)
+        if user_choice == computer_choice:
+            print("It's a tie!")
+        elif user_choice == "stone" and computer_choice == "paper":
+            print("Computer wins this round!")
+            comp_mrk += 1
+        elif user_choice == "stone" and computer_choice == "scissors":
+            print("You win this round!")
+            user_mrk += 1
+        elif user_choice == "paper" and computer_choice == "stone":
+            print("You win this round!")
+            user_mrk += 1
+        elif user_choice == "paper" and computer_choice == "scissors":
+            print("Computer wins this round!")
+            comp_mrk += 1
+        elif user_choice == "scissors" and computer_choice == "stone":
+            print("Computer wins this round!")
+            comp_mrk+= 1
+        elif user_choice == "scissors" and computer_choice == "paper":
+            print("You win this round!")
+            user_mrk += 1
+game(round_play)
+print("Your mark:", user_mrk)
+print("Computer mark:", comp_mrk)
+if user_mrk > comp_mrk:
+    print("You win!")
+elif comp_mrk > user_mrk:
+    print("Computer wins!")
+else:
+    print("It's a tie!")
