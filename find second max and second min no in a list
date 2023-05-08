@@ -1,0 +1,6 @@
+l1=[2,4,9,-10,100,1000,89,67,1,3,0,98]
+l=len(l1)
+l1.sort()
+
+print("second largest no is ",l1[-2])
+print("second smallest no is ",l1[1])
