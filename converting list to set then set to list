@@ -1,0 +1,9 @@
+l1=[2,2,4,9,-10,100,100,1000,2,89,67,1,3,0,0,0,98]
+print("original list = ",l1)
+l1.sort()
+print("sorted list = ",l1)
+s=set(l1)
+print("list converted to set = ",s)
+lis=list(s)
+print("set converted to list = ",lis)
+lis.sort()
